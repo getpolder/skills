@@ -8,7 +8,7 @@ Polder's skills (the Skills database, opened from Settings → Skills) can be wr
 2. Put the address and secret where your agent starts, for example in `~/.zshrc`:
 
    ```sh
-   export POLDER_SKILLS_URL=https://polder.example.com
+   export POLDER_SKILLS_URL=https://docs.polder.work
    export POLDER_SKILLS_TOKEN=ptn_…
    ```
 
@@ -64,7 +64,7 @@ To run it on a schedule on a Mac, a `launchd` job in `~/Library/LaunchAgents/nl.
   <key>ProgramArguments</key>
   <array><string>/opt/homebrew/bin/node</string><string>/path/to/skills/sync.mjs</string></array>
   <key>EnvironmentVariables</key>
-  <dict><key>POLDER_SKILLS_URL</key><string>https://polder.example.com</string><key>POLDER_SKILLS_TOKEN</key><string>ptn_…</string></dict>
+  <dict><key>POLDER_SKILLS_URL</key><string>https://docs.polder.work</string><key>POLDER_SKILLS_TOKEN</key><string>ptn_…</string></dict>
   <key>RunAtLoad</key><true/>
   <key>StartInterval</key><integer>3600</integer>
 </dict>

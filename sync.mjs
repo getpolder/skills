@@ -3,7 +3,7 @@
 // agent such as Pi, Claude Code or Codex. Polder is the source: a skill changed
 // here overwrites the copy on disk, and one removed here is removed there.
 //
-//   POLDER_SKILLS_URL=https://polder.example.com POLDER_SKILLS_TOKEN=ptn_… node sync.mjs [--dir ~/.agents/skills]
+//   POLDER_SKILLS_URL=https://docs.polder.work POLDER_SKILLS_TOKEN=ptn_… node sync.mjs [--dir ~/.agents/skills]
 //
 // The token is an integration's secret with the "Read skills" capability.
 // Only folders this script made (they hold a `.potion` file) are ever changed
