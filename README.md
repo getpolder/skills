@@ -8,8 +8,8 @@ Polder's skills (the Skills database, opened from Settings → Skills) can be wr
 2. Put the address and secret where your agent starts, for example in `~/.zshrc`:
 
    ```sh
-   export POLDER_URL=https://polder.example.com
-   export POLDER_TOKEN=ptn_…
+   export POLDER_SKILLS_URL=https://polder.example.com
+   export POLDER_SKILLS_TOKEN=ptn_…
    ```
 
 ## Pi: sync by itself
@@ -31,7 +31,7 @@ Inside Claude Code, once per colleague:
 /plugin install polder-skills@polder
 ```
 
-From then on the skills are synced into `~/.claude/skills` every time a session starts. `POLDER_URL` and `POLDER_TOKEN` must be in the environment Claude Code starts in; without them the plugin does nothing. If Polder can't be reached the hook fails quietly and the copies from the last sync stay. Update the plugin with `/plugin marketplace update polder`.
+From then on the skills are synced into `~/.claude/skills` every time a session starts. `POLDER_SKILLS_URL` and `POLDER_SKILLS_TOKEN` must be in the environment Claude Code starts in; without them the plugin does nothing. If Polder can't be reached the hook fails quietly and the copies from the last sync stay. Update the plugin with `/plugin marketplace update polder`.
 
 ## Claude desktop and Cowork: upload a plugin
 
@@ -64,7 +64,7 @@ To run it on a schedule on a Mac, a `launchd` job in `~/Library/LaunchAgents/nl.
   <key>ProgramArguments</key>
   <array><string>/opt/homebrew/bin/node</string><string>/path/to/skills/sync.mjs</string></array>
   <key>EnvironmentVariables</key>
-  <dict><key>POLDER_URL</key><string>https://polder.example.com</string><key>POLDER_TOKEN</key><string>ptn_…</string></dict>
+  <dict><key>POLDER_SKILLS_URL</key><string>https://polder.example.com</string><key>POLDER_SKILLS_TOKEN</key><string>ptn_…</string></dict>
   <key>RunAtLoad</key><true/>
   <key>StartInterval</key><integer>3600</integer>
 </dict>

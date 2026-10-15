@@ -1,5 +1,5 @@
 {
   "name": "polder-skills",
   "description": "Syncs your Polder workspace's skills into Claude Code at the start of every session.",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

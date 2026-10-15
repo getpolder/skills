@@ -3,7 +3,7 @@
 // agent such as Pi, Claude Code or Codex. Polder is the source: a skill changed
 // here overwrites the copy on disk, and one removed here is removed there.
 //
-//   POLDER_URL=https://polder.example.com POLDER_TOKEN=ptn_… node sync.mjs [--dir ~/.agents/skills]
+//   POLDER_SKILLS_URL=https://polder.example.com POLDER_SKILLS_TOKEN=ptn_… node sync.mjs [--dir ~/.agents/skills]
 //
 // The token is an integration's secret with the "Read skills" capability.
 // Only folders this script made (they hold a `.potion` file) are ever changed
@@ -60,11 +60,11 @@ const exists = (path) =>
  *   `paths` are the skill folders that now hold a skill from Polder.
  */
 export async function syncSkills({
-    url = process.env.POLDER_URL || process.env.POTION_URL,
-    token = process.env.POLDER_TOKEN || process.env.POTION_TOKEN,
+    url = process.env.POLDER_SKILLS_URL || process.env.POTION_URL,
+    token = process.env.POLDER_SKILLS_TOKEN || process.env.POTION_TOKEN,
     dir = process.env.POLDER_SKILLS_DIR || process.env.POTION_SKILLS_DIR || join(homedir(), '.agents', 'skills'),
 } = {}) {
-    if (!url || !token) throw new Error('Set POLDER_URL and POLDER_TOKEN.');
+    if (!url || !token) throw new Error('Set POLDER_SKILLS_URL and POLDER_SKILLS_TOKEN.');
 
     const skills = await fetchSkills(url, token);
     const result = { written: [], unchanged: [], removed: [], conflicts: [], paths: [] };

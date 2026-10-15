@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "[ -n \"${POLDER_TOKEN:-$POTION_TOKEN}\" ] || exit 0; node \"${CLAUDE_PLUGIN_ROOT}/sync.mjs\" --dir \"$HOME/.claude/skills\"",
+            "command": "[ -n \"${POLDER_SKILLS_TOKEN:-$POTION_TOKEN}\" ] || exit 0; node \"${CLAUDE_PLUGIN_ROOT}/sync.mjs\" --dir \"$HOME/.claude/skills\"",
             "timeout": 30
           }
         ]

@@ -110,7 +110,7 @@ describe('syncSkills', () => {
         await sync();
 
         await expect(syncSkills({ url, token: 'wrong', dir })).rejects.toThrow('Polder answered 401: nope');
-        await expect(syncSkills({ url: '', token: '', dir })).rejects.toThrow('Set POLDER_URL and POLDER_TOKEN.');
+        await expect(syncSkills({ url: '', token: '', dir })).rejects.toThrow('Set POLDER_SKILLS_URL and POLDER_SKILLS_TOKEN.');
         expect(await readdir(dir)).toEqual(['a']);
     });
 });
