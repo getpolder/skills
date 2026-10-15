@@ -1,0 +1,12 @@
+{
+  "name": "polder",
+  "description": "Polder tools for Claude Code",
+  "owner": { "name": "Polder" },
+  "plugins": [
+    {
+      "name": "polder-skills",
+      "source": "./",
+      "description": "Syncs your Polder workspace's skills into Claude Code at the start of every session."
+    }
+  ]
+}
